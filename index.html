@@ -6,29 +6,95 @@
     <title>Ajay Budumuru - Cloud & Infrastructure Architect</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f9fafb; color: #1f2937; }
-        .section-header { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #1e40af; }
-        .card { background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
-        .profile-img { width:150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #1e40af; }
-        .social-link { color: #1e40af; text-decoration: none; }
-        .social-link:hover { text-decoration: underline; }
-        .project-item { margin-bottom: 1rem; padding: 1rem; background: #f8fafc; border-left: 4px solid #1e40af; }
-        .map-container { height: 200px; margin-top: 1rem; }
-        .research-align { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 0.5rem; }
-        .highlight { background: #fef3c7; padding: 0.5rem; border-radius: 0.25rem; font-weight: bold; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(to bottom, #e6f3ff 0%, #f9fafb 100%); 
+            color: #1f2937; 
+        }
+        .section-header { 
+            font-size: 1.75rem; 
+            font-weight: 700; 
+            margin-bottom: 1.5rem; 
+            color: #1e3a8a; 
+            border-bottom: 2px solid #3b82f6; 
+            padding-bottom: 0.5rem; 
+        }
+        .card { 
+            background: white; 
+            border-radius: 0.75rem; 
+            padding: 2rem; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            margin-bottom: 2.5rem; 
+            transition: transform 0.3s ease; 
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+        }
+        .social-link { 
+            color: #2563eb; 
+            text-decoration: none; 
+            font-weight: 500; 
+        }
+        .social-link:hover { 
+            text-decoration: underline; 
+            color: #1e40af; 
+        }
+        .project-item { 
+            margin-bottom: 1.5rem; 
+            padding: 1.25rem; 
+            background: #f8fafc; 
+            border-left: 5px solid #2563eb; 
+            border-radius: 0.5rem; 
+            transition: background 0.3s ease; 
+        }
+        .project-item:hover { 
+            background: #eff6ff; 
+        }
+        .map-container { 
+            height: 250px; 
+            margin-top: 1.5rem; 
+            border-radius: 0.5rem; 
+            overflow: hidden; 
+        }
+        .research-align { 
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
+            color: white; 
+            padding: 2.5rem; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+        .highlight { 
+            background: #dbeafe; 
+            padding: 0.5rem 0.75rem; 
+            border-radius: 0.25rem; 
+            font-weight: 600; 
+            color: #1e40af; 
+        }
+        header { 
+            background: #ffffff; 
+            border-radius: 0.75rem; 
+            padding: 2rem; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
+        nav a { 
+            font-weight: 500; 
+            transition: color 0.3s ease; 
+        }
+        nav a:hover { 
+            color: #1e40af; 
+        }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 </head>
 <body class="min-h-screen">
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-12">
         <!-- Header Section -->
-        <header class="text-center mb-8">
-            <img src="https://via.placeholder.com/150" alt="Ajay Budumuru" class="profile-img mx-auto mb-4">
-            <h1 class="text-3xl font-bold">Ajay Budumuru</h1>
-            <p class="text-lg text-gray-600">Cloud & Infrastructure Architect</p>
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold">Ajay Budumuru</h1>
+            <p class="text-xl text-gray-600 mt-2">Cloud & Infrastructure Architect</p>
             <p class="text-gray-600">Virtualization | Cloud Computing | Software Defined Infrastructure</p>
-            <p class="mt-2">
+            <p class="mt-4">
                 <a href="mailto:ajay2chaitanya@gmail.com" class="social-link">ajay2chaitanya@gmail.com</a> | 
                 <a href="tel:+918328656827" class="social-link">+91 8328656827</a> | 
                 <a href="https://www.credly.com/users/ajay-budumuru" class="social-link">Credly</a> | 
@@ -37,7 +103,7 @@
         </header>
 
         <!-- Navigation -->
-        <nav class="flex justify-center space-x-4 mb-8">
+        <nav class="flex justify-center space-x-6 mb-10">
             <a href="#home" class="text-blue-600 hover:underline">Home</a>
             <a href="#research" class="text-blue-600 hover:underline">Research Interests</a>
             <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
@@ -60,7 +126,7 @@
         <!-- Research Interests Section -->
         <section id="research" class="card">
             <h2 class="section-header">Research Interests</h2>
-            <div class="grid md:grid-cols-2 gap-4">
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="project-item">
                     <h3 class="font-semibold text-blue-600">Cloud Infrastructure Design</h3>
                     <p>Architecting scalable cloud systems with focus on virtualization platforms, hybrid cloud deployments, and infrastructure optimization.</p>
@@ -170,7 +236,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-gray-600 mt-8">
+        <footer class="text-center text-gray-600 mt-10">
             <p>© 2025 Ajay Budumuru | Built for research collaboration</p>
             <p class="mt-2">Technologies: Tailwind CSS | Leaflet | Hugo Blox Builder</p>
         </footer>

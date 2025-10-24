@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Budumuru - Cloud & Infrastructure Architect</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f9fafb; color: #1f2937; }
+        .section-header { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #1e40af; }
+        .card { background: white; border-radius: 0.5rem; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .profile-img { width:150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #1e40af; }
+        .social-link { color: #1e40af; text-decoration: none; }
+        .social-link:hover { text-decoration: underline; }
+        .project-item { margin-bottom: 1rem; padding: 1rem; background: #f8fafc; border-left: 4px solid #1e40af; }
+        .map-container { height: 200px; margin-top: 1rem; }
+        .research-align { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 2rem; border-radius: 0.5rem; }
+        .highlight { background: #fef3c7; padding: 0.5rem; border-radius: 0.25rem; font-weight: bold; }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <header class="text-center mb-8">
+            <img src="https://via.placeholder.com/150" alt="Ajay Budumuru" class="profile-img mx-auto mb-4">
+            <h1 class="text-3xl font-bold">Ajay Budumuru</h1>
+            <p class="text-lg text-gray-600">Cloud & Infrastructure Architect</p>
+            <p class="text-gray-600">Virtualization | Cloud Computing | Software Defined Infrastructure</p>
+            <p class="mt-2">
+                <a href="mailto:ajay2chaitanya@gmail.com" class="social-link">ajay2chaitanya@gmail.com</a> | 
+                <a href="tel:+918328656827" class="social-link">+91 8328656827</a> | 
+                <a href="https://www.credly.com/users/ajay-budumuru" class="social-link">Credly</a> | 
+                <a href="https://github.com/ajaybudumuru" class="social-link">GitHub</a>
+            </p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="flex justify-center space-x-4 mb-8">
+            <a href="#home" class="text-blue-600 hover:underline">Home</a>
+            <a href="#research" class="text-blue-600 hover:underline">Research Interests</a>
+            <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
+            <a href="#experience" class="text-blue-600 hover:underline">Experience</a>
+            <a href="#education" class="text-blue-600 hover:underline">Education</a>
+            <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+        </nav>
+
+        <!-- Biography Section -->
+        <section id="home" class="card">
+            <h2 class="section-header">About Me</h2>
+            <p>
+                I’m Ajay Budumuru, a Cloud & Infrastructure Architect with expertise in virtualization technologies, cloud infrastructure design, and software-defined systems. My work focuses on deploying virtual computing environments and managing scalable cloud infrastructure, driven by a passion for advancing research in cloud computing systems and software development processes.
+            </p>
+            <p class="mt-4 research-align">
+                <strong>Research Focus:</strong> I am eager to contribute to research on <span class="highlight">cloud infrastructure design, virtual computing environments deployment, and software-defined networks (SDN)</span>. My interests lie in process modeling, repository mining, and resource management in distributed systems, aiming to optimize software and cloud system performance.
+            </p>
+        </section>
+
+        <!-- Research Interests Section -->
+        <section id="research" class="card">
+            <h2 class="section-header">Research Interests</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="project-item">
+                    <h3 class="font-semibold text-blue-600">Cloud Infrastructure Design</h3>
+                    <p>Architecting scalable cloud systems with focus on virtualization platforms, hybrid cloud deployments, and infrastructure optimization.</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="font-semibold text-blue-600">Virtual Computing Environments</h3>
+                    <p>Deployment and management of virtualized infrastructure using container orchestration, VM management, and hypervisor technologies.</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="font-semibold text-blue-600">Software Defined Networks (SDN)</h3>
+                    <p>Implementing programmable network architectures for cloud environments, including OpenFlow networks and network virtualization.</p>
+                </div>
+                <div class="project-item">
+                    <h3 class="font-semibold text-blue-600">Resource Management</h3>
+                    <p>Optimization of computing resources in distributed systems, including high-performance computing and large-scale infrastructure management.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
+            <h2 class="section-header">Key Projects & Technical Expertise</h2>
+            <div class="project-item">
+                <h3 class="font-semibold">Virtualization Platform for Cloud Research</h3>
+                <p class="text-gray-600">Infrastructure Architect | Enterprise Deployment</p>
+                <p>Designed and deployed a virtualization platform with blade server clusters and high-speed network storage, enabling advanced cloud computing research and software analysis. Implemented container orchestration and VM management systems for scalable resource allocation.</p>
+            </div>
+            <div class="project-item">
+                <h3 class="font-semibold">Software Defined Network (SDN) Deployment</h3>
+                <p class="text-gray-600">Cloud Infrastructure | Network Virtualization</p>
+                <p>Architected SDN environments using OpenFlow protocols for international network demonstrations. Developed automated deployment pipelines for programmable network infrastructure, supporting research in widely distributed systems and cloud-native networking.</p>
+            </div>
+            <div class="project-item">
+                <h3 class="font-semibold">Infrastructure as Code for Cloud Systems</h3>
+                <p class="text-gray-600">Terraform | CloudFormation | Automation</p>
+                <p>Created Infrastructure as Code solutions for multi-cloud environments (AWS, Azure, GCP), enabling reproducible deployments of virtual computing environments. Specialized in VPC management, load balancing, and security group automation for research-grade infrastructure.</p>
+            </div>
+            <div class="project-item">
+                <h3 class="font-semibold">Fuzzy Logic Control Systems</h3>
+                <p class="text-gray-600">MATLAB/Simulink | Power Systems Optimization</p>
+                <p>Developed fuzzy logic controllers for power quality improvement in distribution systems. Applied optimization techniques relevant to resource management and system performance analysis in computing architectures.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="card">
+            <h2 class="section-header">Professional Experience</h2>
+            <div class="mb-6">
+                <h3 class="font-semibold text-lg">Cloud & Infrastructure Architect</h3>
+                <p class="text-gray-600"><strong>LTIMindtree</strong> | Jul 2025 – Present | Bengaluru, India</p>
+                <ul class="list-disc pl-5 mt-2">
+                    <li>Lead design and implementation of virtualization platforms and cloud infrastructure for enterprise-scale deployments</li>
+                    <li>Specialize in container orchestration (Kubernetes, Docker) and Infrastructure as Code (Terraform, CloudFormation)</li>
+                    <li>Manage multi-cloud environments with focus on security, networking, and performance optimization</li>
+                </ul>
+            </div>
+            <div class="mb-6">
+                <h3 class="font-semibold text-lg">Cloud & Infrastructure Architect</h3>
+                <p class="text-gray-600"><strong>Crayon Software Experts</strong> | Oct 2023 – Jul 2025 | Bengaluru, India</p>
+                <ul class="list-disc pl-5 mt-2">
+                    <li>Architected virtual computing environments and SDN deployments for research and enterprise applications</li>
+                    <li>Developed automation frameworks for cloud resource management and infrastructure provisioning</li>
+                    <li>Implemented security and compliance frameworks across hybrid cloud architectures</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="card">
+            <h2 class="section-header">Education</h2>
+            <div class="mb-4">
+                <h3 class="font-semibold">Bachelor of Technology (B.Tech)</h3>
+                <p class="text-gray-600">Electrical and Electronics Engineering</p>
+                <p>Jawaharlal Nehru Technological University, Kakinada</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="card">
+            <h2 class="section-header">Certifications & Community</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <ul class="list-disc pl-5">
+                    <li>Microsoft Certified: Azure Administrator (AZ-104, AZ-900) – 2024</li>
+                    <li>Microsoft Certified: Azure DevOps Expert (AZ-400) – (June-2025 to June 2026)</li>
+                    <li>AWS Certified Solutions Architect – (Oct 2024 to Oct 2027)</li>
+                </ul>
+                <ul class="list-disc pl-5">
+                    <li>GCP Professional Cloud Solutions Architect – (May 2025 to May 2027)</li>
+                    <li>AWS Community Builder (2025 - Present)</li>
+                    <li>Active contributor to open-source cloud infrastructure projects</li>
+                </ul>
+            </div>
+            <p class="mt-4">View certifications: <a href="https://www.credly.com/users/ajay-budumuru" class="social-link">Credly Profile</a></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="card">
+            <h2 class="section-header">Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:ajay2chaitanya@gmail.com" class="social-link">ajay2chaitanya@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+918328656827" class="social-link">+91 8328656827</a></p>
+            <p><strong>Location:</strong> Bengaluru, India </p>
+            <p><strong>Availability:</strong> Monday to Friday, 10:00 AM to 6:00 PM IST</p>
+            <p class="mt-4 research-align">
+                <strong>Research Collaboration:</strong> Interested in contributing to projects on cloud infrastructure, virtualization, and distributed systems research.
+            </p>
+            <div id="map" class="map-container"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 mt-8">
+            <p>© 2025 Ajay Budumuru | Built for research collaboration</p>
+            <p class="mt-2">Technologies: Tailwind CSS | Leaflet | Hugo Blox Builder</p>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Leaflet map for Bengaluru
+        var map = L.map('map').setView([12.9716, 77.5946], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        L.marker([12.9716, 77.5946]).addTo(map)
+            .bindPopup('Bengaluru, India - Cloud Infrastructure Hub')
+            .openPopup();
+    </script>
+</body>
+</html>
